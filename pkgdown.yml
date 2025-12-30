@@ -1,0 +1,9 @@
+pandoc: 3.1.11
+pkgdown: 2.2.0
+pkgdown_sha: ~
+articles:
+  test: test.html
+last_built: 2025-12-30T07:16Z
+urls:
+  reference: https://stantraykov.github.io/testpkg/reference
+  article: https://stantraykov.github.io/testpkg/articles

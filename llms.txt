@@ -1,0 +1,15 @@
+More about what it does (maybe more than one line). Continuation lines
+should be indented.
+
+# Package index
+
+## All functions
+
+- [`hello()`](https://stantraykov.github.io/testpkg/reference/hello.md)
+  : Says hello
+
+# Articles
+
+### All vignettes
+
+- [test](https://stantraykov.github.io/testpkg/articles/test.md):
