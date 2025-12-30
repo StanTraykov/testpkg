@@ -19,6 +19,10 @@ library(testpkg)
 ```
 
 ```{r test}
+ok <- Sys.setlocale("LC_MESSAGES", "bg_BG.UTF-8")
+ok
+hello()
+
 hello()
 Sys.setLanguage("bg")
 hello()
