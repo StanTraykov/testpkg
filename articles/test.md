@@ -5,14 +5,20 @@ library(testpkg)
 ```
 
 ``` r
+ok <- Sys.setlocale("LC_MESSAGES", "bg_BG.UTF-8")
+ok
+#> [1] "bg_BG.UTF-8"
+hello()
+#> [1] "Hello"
+
 hello()
 #> [1] "Hello"
 Sys.setLanguage("bg")
 hello()
-#> [1] "Hello"
+#> [1] "Здравей!"
 Sys.setenv(LANGUAGE = "bg")
 hello()
-#> [1] "Hello"
+#> [1] "Здравей!"
 ```
 
 ``` r
@@ -28,7 +34,7 @@ cat("\nLOCALE:\n")
 #> 
 #> LOCALE:
 print(Sys.getlocale())
-#> [1] "LC_CTYPE=C.UTF-8;LC_NUMERIC=C;LC_TIME=C.UTF-8;LC_COLLATE=C.UTF-8;LC_MONETARY=C.UTF-8;LC_MESSAGES=C.UTF-8;LC_PAPER=C.UTF-8;LC_NAME=C;LC_ADDRESS=C;LC_TELEPHONE=C;LC_MEASUREMENT=C.UTF-8;LC_IDENTIFICATION=C"
+#> [1] "LC_CTYPE=C.UTF-8;LC_NUMERIC=C;LC_TIME=C.UTF-8;LC_COLLATE=C.UTF-8;LC_MONETARY=C.UTF-8;LC_MESSAGES=bg_BG.UTF-8;LC_PAPER=C.UTF-8;LC_NAME=C;LC_ADDRESS=C;LC_TELEPHONE=C;LC_MEASUREMENT=C.UTF-8;LC_IDENTIFICATION=C"
 
 cat("\nl10n_info():\n")
 #> 
