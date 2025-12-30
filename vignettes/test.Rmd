@@ -25,3 +25,15 @@ hello()
 Sys.setenv(LANGUAGE = "bg")
 hello()
 ```
+
+```{r infoshow}
+cat("NLS capability:", capabilities("NLS"), "\n\n")
+
+cat("ENV:\n")
+print(Sys.getenv(c("LANGUAGE", "LC_ALL", "LC_MESSAGES", "LANG")))
+cat("\nLOCALE:\n")
+print(Sys.getlocale())
+
+cat("\nl10n_info():\n")
+print(l10n_info())
+```
