@@ -46,3 +46,28 @@ print(l10n_info())
 #> $codeset
 #> [1] "UTF-8"
 ```
+
+``` r
+ok <- Sys.setlocale("LC_MESSAGES", "bg_BG.UTF-8")
+#> Warning in Sys.setlocale("LC_MESSAGES", "bg_BG.UTF-8"): OS reports request to
+#> set locale to "bg_BG.UTF-8" cannot be honored
+ok
+#> [1] ""
+hello()
+#> [1] "Hello"
+
+Sys.setlocale("LC_ALL", "bg_BG.UTF-8")
+#> Warning in Sys.setlocale("LC_ALL", "bg_BG.UTF-8"): OS reports request to set
+#> locale to "bg_BG.UTF-8" cannot be honored
+#> [1] ""
+hello()
+#> [1] "Hello"
+
+Sys.setenv(
+  LANG = "bg_BG.UTF-8",
+  LC_MESSAGES = "bg_BG.UTF-8",
+  LANGUAGE = "bg"
+)
+hello()
+#> [1] "Hello"
+```
