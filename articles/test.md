@@ -49,19 +49,15 @@ print(l10n_info())
 
 ``` r
 ok <- Sys.setlocale("LC_MESSAGES", "bg_BG.UTF-8")
-#> Warning in Sys.setlocale("LC_MESSAGES", "bg_BG.UTF-8"): OS reports request to
-#> set locale to "bg_BG.UTF-8" cannot be honored
 ok
-#> [1] ""
+#> [1] "bg_BG.UTF-8"
 hello()
-#> [1] "Hello"
+#> [1] "Здравей!"
 
 Sys.setlocale("LC_ALL", "bg_BG.UTF-8")
-#> Warning in Sys.setlocale("LC_ALL", "bg_BG.UTF-8"): OS reports request to set
-#> locale to "bg_BG.UTF-8" cannot be honored
-#> [1] ""
+#> [1] "LC_CTYPE=bg_BG.UTF-8;LC_NUMERIC=C;LC_TIME=bg_BG.UTF-8;LC_COLLATE=bg_BG.UTF-8;LC_MONETARY=bg_BG.UTF-8;LC_MESSAGES=bg_BG.UTF-8;LC_PAPER=C.UTF-8;LC_NAME=C;LC_ADDRESS=C;LC_TELEPHONE=C;LC_MEASUREMENT=C.UTF-8;LC_IDENTIFICATION=C"
 hello()
-#> [1] "Hello"
+#> [1] "Здравей!"
 
 Sys.setenv(
   LANG = "bg_BG.UTF-8",
@@ -69,5 +65,5 @@ Sys.setenv(
   LANGUAGE = "bg"
 )
 hello()
-#> [1] "Hello"
+#> [1] "Здравей!"
 ```
